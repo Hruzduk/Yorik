@@ -26,11 +26,12 @@ alwaysApply: true
 - **Блок «Тренер»:** лише **`photo/zhabinsky.jpg`** (старе `sensey.jpg` з цього блоку прибрано).
 - **Галерея:** знімки з **атестацій і турнірів**, не з «звичайних» тренувань. Заголовок секції — про змагання/атестації; короткий підзаголовок: **«Атестація та турніри»**.
 - У контактах: `photo/QR.jpg` (Instagram).
+- **Фон (гілка `experiment/background`):** `photo/back.png` — повноекранний фон, не галерея.
 
 ## Технічне
 
 - Карти: вбудовані **Google Maps** (iframe) у картках напрямів + посилання «Відкрити в Google Картах».
-- Репозиторій: **git@github.com:Hruzduk/Yorik.git**, гілка **master**.
+- Репозиторій: **git@github.com:Hruzduk/Yorik.git**. Гілки **`master`** (суцільний темний фон) та **`experiment/background`** (додано `photo/back.png`, `.page-bg`). Тег **`background-mix-subtle`** — резерв «тихішого» фону.
 - Деплой: **GitHub Pages** через workflow `.github/workflows/pages.yml` (у налаштуваннях репо Pages → джерело **GitHub Actions**).
 
 При змінах зберігати стиль: темна тема, червоний акцент, українська мова контенту.
