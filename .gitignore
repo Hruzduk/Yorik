@@ -2,5 +2,8 @@ Thumbs.db
 .DS_Store
 desktop.ini
 
+# Службове зображення, не для галереї / сайту
+photo/back.png
+
 # Локальні правила Cursor (джерело правди в репо — PROJECT_CONTEXT.md + *.example)
 .cursor/
