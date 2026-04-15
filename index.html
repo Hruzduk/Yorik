@@ -24,14 +24,6 @@
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="logo" href="#">Час <span>битися</span></a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          Меню
-        </button>
         <nav class="nav" id="site-nav" aria-label="Головна навігація">
           <ul class="nav-list">
             <li><a href="#about-school">Про школу</a></li>
@@ -41,6 +33,17 @@
             <li><a href="#contact">Контакти</a></li>
           </ul>
         </nav>
+        <button class="btn btn-primary header-signup" type="button" data-open-signup>
+          Записатися
+        </button>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Меню
+        </button>
       </div>
     </header>
 
@@ -67,7 +70,8 @@
                 rel="noopener noreferrer"
                 >Instagram</a
               >
-              <a class="btn btn-ghost" href="#contact">Звʼязатися</a>
+              <button class="btn btn-ghost" type="button" data-open-signup>Записатися</button>
+              <a class="btn btn-ghost" href="#contact">Контакти</a>
             </div>
           </div>
           <div class="hero-photo">
@@ -105,6 +109,103 @@
               rel="noopener noreferrer"
               >bushinkai.org — Бушинкай Інтернешнл</a
             >
+          </div>
+
+          <h3 class="about-subtitle" id="about-approach">Наш підхід до навчання</h3>
+          <p class="about-text">
+            Ми ведемо заняття як послідовну систему з зрозумілою логікою: важливо не лише
+            <em>який</em> рух виконати, а <em>чому</em> саме так, як приймати рішення в динаміці та
+            як працювати з партнером без зайвої травматичності.
+          </p>
+          <p class="about-text">
+            Такий підхід допомагає кожному знайти власний темп і стиль — незалежно від віку,
+            фізичної форми чи досвіду на килимі.
+          </p>
+
+          <ul class="approach-grid" aria-label="Принципи навчання">
+            <li class="approach-item">
+              <span class="approach-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="10" cy="12" r="3" />
+                  <circle cx="22" cy="20" r="3" />
+                  <path d="M13 12h6M10 15l4 4M22 17l-4 4M16 8v4" />
+                </svg>
+              </span>
+              <span class="approach-item__text"
+                >Розвиваємо техніку через структуроване й послідовне навчання</span
+              >
+            </li>
+            <li class="approach-item">
+              <span class="approach-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="11" cy="14" r="4" />
+                  <circle cx="21" cy="14" r="4" />
+                  <path d="M11 18c2 3 8 3 10 0" />
+                </svg>
+              </span>
+              <span class="approach-item__text"
+                >Формуємо культуру взаємодії та поваги на килимі</span
+              >
+            </li>
+            <li class="approach-item">
+              <span class="approach-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M8 26l4-14h8l4 14M12 12l2-6h4l2 6" />
+                  <path d="M11 22h10" />
+                </svg>
+              </span>
+              <span class="approach-item__text"
+                >Підтримуємо на кожному етапі — від першого тренування до турнірної практики</span
+              >
+            </li>
+            <li class="approach-item">
+              <span class="approach-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="16" cy="15" r="7" />
+                  <path d="M11 14h2M19 14h2M13 19c1.5 1 4.5 1 6 0" />
+                </svg>
+              </span>
+              <span class="approach-item__text"
+                >Допомагаємо знайти свій темп і спосіб самовираження в джиу-джитсу</span
+              >
+            </li>
+          </ul>
+
+          <h3 class="about-subtitle" id="about-audience">Тренування для різних рівнів</h3>
+          <p class="about-text">
+            Групові заняття підходять для різних категорій учнів — від тих, хто лише починає, до
+            тих, хто готується до змагань. Навантаження й темп підбираємо відповідно до рівня та
+            стану, зберігаючи практично-бойовий зміст техніки.
+          </p>
+          <ul class="audience-list">
+            <li>
+              <strong>Діти та підлітки</strong>
+              Рухливість, увага, робота з партнером і повага до інших на килимі (деталі щодо вікових
+              груп — уточнюйте при записі або в Instagram).
+            </li>
+            <li>
+              <strong>Дорослі-початківці</strong>
+              Структурований вхід у джиу-джитсу з акцентом на базові принципи — без зайвого поспіху
+              й тиску.
+            </li>
+            <li>
+              <strong>Ті, хто тренується для себе</strong>
+              Підтримка форми, розвиток техніки та задоволення від процесу без обов’язкової
+              змагальної мети.
+            </li>
+            <li>
+              <strong>Спортсмени</strong>
+              Підготовка до змагань, робота над стратегією, інтенсивність і дисципліна в межах
+              групового формату.
+            </li>
+          </ul>
+          <p class="about-text about-text--note">
+            Індивідуальні тренування можливі за домовленістю з тренером — зручний час і фокус на
+            ваших цілях.
+          </p>
+
+          <div class="about-cta">
+            <button class="btn btn-invert" type="button" data-open-signup>Записатися на тренування</button>
           </div>
         </div>
       </section>
@@ -324,7 +425,7 @@
               </li>
             </ul>
             <div class="qr-box">
-              <img src="photo/QR.jpg" width="180" height="180" alt="QR-код на Instagram" loading="lazy" />
+              <img src="photo/NewQR.jpg" width="180" height="180" alt="QR-код на Instagram" loading="lazy" />
               <span>Сторінка в Instagram</span>
             </div>
           </div>
@@ -353,6 +454,76 @@
       <img src="" alt="" />
     </div>
 
+    <div
+      class="signup-modal"
+      id="signup-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="signup-title"
+    >
+      <div class="signup-modal__backdrop" data-close-signup tabindex="-1"></div>
+      <div class="signup-modal__panel">
+        <button type="button" class="signup-modal__close" data-close-signup aria-label="Закрити">
+          &times;
+        </button>
+        <h2 id="signup-title" class="signup-modal__title">Запишіться на тренування</h2>
+        <p class="signup-modal__lead" id="signup-lead">
+          Залиште імʼя та телефон — звʼяжемося, обговоримо деталі й відповімо на запитання.
+        </p>
+        <div class="signup-modal__global" data-fs-success></div>
+        <div class="signup-modal__global signup-modal__global--error" data-fs-error></div>
+        <form id="signup-form" class="signup-form" novalidate aria-describedby="signup-lead">
+          <input type="hidden" name="_subject" value="Запис на тренування — ГО «Час битися»" />
+          <label class="signup-form__label" for="signup-name">Імʼя</label>
+          <input
+            class="signup-form__input"
+            id="signup-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            data-fs-field
+          />
+          <span class="signup-form__field-error" data-fs-error="name"></span>
+
+          <label class="signup-form__label" for="signup-phone">Телефон (месенджер)</label>
+          <input
+            class="signup-form__input"
+            id="signup-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            inputmode="tel"
+            required
+            data-fs-field
+          />
+          <span class="signup-form__field-error" data-fs-error="phone"></span>
+
+          <label class="signup-form__consent">
+            <input type="checkbox" name="consent" value="yes" required data-fs-field />
+            <span
+              >Погоджуюся на обробку персональних даних для відповіді на цю заявку (імʼя та телефон).</span
+            >
+          </label>
+          <span class="signup-form__field-error" data-fs-error="consent"></span>
+
+          <button class="btn btn-primary signup-form__submit" type="submit" data-fs-submit-btn>
+            Відправити
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+      formspree("initForm", { formElement: "#signup-form", formId: "mlgagnqv" });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="script.js" defer></script>
   </body>
 </html>
