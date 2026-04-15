@@ -1,4 +1,45 @@
 (function () {
+  var signupModal = document.getElementById("signup-modal");
+  var signupOpeners = document.querySelectorAll("[data-open-signup]");
+  var signupClosers = document.querySelectorAll("[data-close-signup]");
+  var lastFocus = null;
+
+  function openSignup() {
+    if (!signupModal) return;
+    var nt = document.querySelector(".nav-toggle");
+    var nv = document.querySelector(".nav");
+    if (nt && nv && nv.classList.contains("is-open")) {
+      nv.classList.remove("is-open");
+      nt.setAttribute("aria-expanded", "false");
+    }
+    lastFocus = document.activeElement;
+    signupModal.classList.add("is-open");
+    signupModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    var first = signupModal.querySelector("input:not([type='hidden'])");
+    if (first) window.setTimeout(function () { first.focus(); }, 10);
+  }
+
+  function closeSignup() {
+    if (!signupModal) return;
+    signupModal.classList.remove("is-open");
+    signupModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+  }
+
+  signupOpeners.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      openSignup();
+    });
+  });
+
+  signupClosers.forEach(function (el) {
+    el.addEventListener("click", function () {
+      closeSignup();
+    });
+  });
+
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
   if (toggle && nav) {
@@ -49,7 +90,13 @@
   }
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && lightbox && lightbox.classList.contains("is-open")) {
+    if (e.key !== "Escape") return;
+    if (signupModal && signupModal.classList.contains("is-open")) {
+      e.preventDefault();
+      closeSignup();
+      return;
+    }
+    if (lightbox && lightbox.classList.contains("is-open")) {
       closeLightbox();
     }
   });
