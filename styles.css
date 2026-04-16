@@ -26,6 +26,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* База для rem: трохи більше за типовий 16px для кращої читабельності */
+  font-size: 108%;
 }
 
 body {
