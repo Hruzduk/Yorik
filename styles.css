@@ -222,7 +222,6 @@ img {
   color: var(--muted);
   font-size: 1.05rem;
   margin: 0 0 1.5rem;
-  max-width: 36ch;
 }
 
 .hero-badges {
@@ -334,7 +333,6 @@ section {
 .section-intro {
   color: var(--muted);
   margin: 0 0 1.5rem;
-  max-width: 60ch;
 }
 
 .card-grid {
@@ -440,7 +438,6 @@ section {
 .about-text {
   color: var(--muted);
   margin: 0 0 1rem;
-  max-width: 65ch;
 }
 
 .about-text em {
@@ -823,6 +820,37 @@ section {
     flex-direction: column;
     padding: 0.75rem 0 0;
     gap: 0.65rem;
+  }
+
+  /* Щільніший набірний рядок на вузькому екрані (без «ями» справа) */
+  main .hero-lead,
+  main .section-intro,
+  main .about-text,
+  .federation p,
+  .card > p,
+  .trainer-grid .trainer-photo + div p,
+  .achievements li,
+  .contact-list li {
+    text-align: justify;
+    text-align-last: start;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  .audience-list li {
+    text-align: justify;
+    text-align-last: start;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  .approach-item__text {
+    flex: 1;
+    min-width: 0;
+    text-align: justify;
+    text-align-last: start;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 }
 
