@@ -1,4 +1,36 @@
 (function () {
+  /* Плавний перехід до секцій без # у адресному рядку */
+  function stripUrlHash() {
+    if (!history.replaceState) return;
+    var path = window.location.pathname + window.location.search;
+    history.replaceState(null, "", path);
+  }
+
+  (function initInPageNavWithoutHash() {
+    var h = window.location.hash;
+    if (h && h.length > 1) {
+      var onLoadTarget = document.getElementById(h.slice(1));
+      if (onLoadTarget) {
+        stripUrlHash();
+        onLoadTarget.scrollIntoView({ behavior: "auto", block: "start" });
+      }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (!href || href.length < 2) return;
+      link.addEventListener("click", function (e) {
+        if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+        var id = href.slice(1);
+        var target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        stripUrlHash();
+      });
+    });
+  })();
+
   var signupModal = document.getElementById("signup-modal");
   var signupOpeners = document.querySelectorAll("[data-open-signup]");
   var signupClosers = document.querySelectorAll("[data-close-signup]");

@@ -749,6 +749,11 @@ section {
   margin-bottom: 0.2rem;
 }
 
+.contact-phone {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .qr-box {
   text-align: center;
 }
